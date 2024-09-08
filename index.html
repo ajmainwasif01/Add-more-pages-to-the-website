@@ -44,6 +44,30 @@
     <p>
         Pizza (Italian: [ˈpittsa], Neapolitan: [ˈpittsa]) is a savory dish of Italian origin consisting of a usually round, flattened base of leavened wheat-based dough topped with tomatoes, cheese, and often various other ingredients (such as anchovies, mushrooms, onions, olives, pineapple, meat, etc.), which is then baked at a high temperature, traditionally in a wood-fired oven. A small pizza is sometimes called a pizzetta. A person who makes pizza is known as a pizzaiolo.
     </p>
+    <section>
+        <img class="mySlides" src="image1.jpg" style="height:500px; width:1340px;">
+        <img class="mySlides" src="image2.jpg" style="height:500px; width:1340px;">
+        <img class="mySlides" src="image3.jpg" style="height:500px; width:1340px;">
+    </section>
+    <script>
+    // Automatic Slideshow - change image every 3 seconds
+    var myIndex = 0;
+    carousel();
+    
+    function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        myIndex++;
+        if (myIndex > x.length) {
+            myIndex = 1;
+        }
+        x[myIndex-1].style.display = "block";
+        setTimeout(carousel, 3000); // Change image every 3 seconds
+    }
+    </script>
     
 </body>
 </html>
